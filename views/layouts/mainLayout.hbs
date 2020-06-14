@@ -1,0 +1,51 @@
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+  <div class="navbar-fixed ">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo left" style="text-decoration:none">Bloggy</a>
+        <ul class="right">
+          <li><a href="#">CART</a>
+          </li>
+          <li><a href="#modal1" class="btn waves-effect waves-light red darken-4 loginBtn">LOGIN</a></li>
+
+        </ul>
+        <form class=" hide-on-med-and-down" id="form1">
+          <div class="input-field" style="max-width: 400pt;">
+            <input id="search" type="search" required onkeyup="getBlogs(this.value,0);" placeholder="Search">
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+            <div id="searchResults"></div>
+          </div>
+        </form>
+
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="row">
+    <div class="sidenav col l3 s5 m4 z-depth-5">
+      <ul>
+        <li><a href="sass.html">Signature</a></li>
+        <li class="subsection"><a href="/add">Upload</a></li>
+
+        <li class="line"></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/store">Store</a></li>
+        <li><a href="sass.html">Request</a></li>
+        <li><a href="sass.html">Contact</a></li>
+        <li><a href="sass.html">FAQ</a></li>
+        <li><a href="sass.html">About us</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="MainBody">
+    {{> loginModal}}
+    {{{body}}}
+  </div>
